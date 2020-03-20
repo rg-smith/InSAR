@@ -2,7 +2,6 @@ import numpy as np
 from scipy import io
 import matplotlib.pyplot as plt
 from osgeo import gdal
-from sklearn.decomposition import PCA
 
 def calc_tm(flist):
 
