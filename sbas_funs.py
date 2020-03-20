@@ -126,6 +126,8 @@ def saveraster(data,drivername,fname,gtr,proj,datatype):
     outBand.WriteArray(data,0,0)
 
 def correlate_baseline(phase,igram_list,names_fname,baseline_dat_fname,col=4):
+    # this calculates the correlation between phase and baseline at each pixel. if correlation 
+    # is high, there are DEM errors.
     # make a list with names of igrams, make a list of names of individual sar scenes
     dat=np.genfromtxt(baseline_dat_fname)
     dat2=np.genfromtxt(igram_list,dtype='str')
