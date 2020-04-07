@@ -149,3 +149,16 @@ def correlate_baseline(phase,igram_list,names_fname,baseline_dat_fname,col=4):
             p_est=coeffs[1]*sp_baseline_full
             phase[yy,xx,:]=phase[yy,xx,:]-p_est
     return sp_baseline_full,coeff,phase
+
+
+## Example:
+## flist is a .txt file with filename of each interferogram
+## names is a .txt file with filename of each SAR scene
+#r_ref=___# pick a pixel in range and azimuth that you expect has no deformation
+#az_ref=___ # see line 2
+#phase,xx,yy=load_igrams(flist) # load in unwrapped rasters
+#Tm,dates=calc_tm(flist) # make matrix of days elapsed between SAR images
+#velocity,_=sbas_linear(Tm,phase,r_ref,az_ref) # calculate velocity between each scene
+#position=posfromvel(velocity,dates) # this gives you a time series of deformation. 3D matrix, 1st and 2nd dimensions are horizontal position, 3rd dimension is deformation
+#meanvel=calc_mean_vel(position,dates) # calculates average velocity in cm/yr
+#baseline,coeff,corrected=correlate_baseline(phase,flist,names,'baseline.dat') # returns matrix of the coefficients relating phase to baseline (high absolute value means more DEM errors), and corrected phase values
