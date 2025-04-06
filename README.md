@@ -1,5 +1,5 @@
 # InSAR
-Scripts to aid in processing InSAR data with GMTSAR, as well as pos-processing SBAS analysis in Matlab  
+Scripts to aid in processing InSAR data with GMTSAR, as well as post-processing SBAS analysis in python  
 **ers_rename_raw_data.sh:** this shell script renames ERS C-band images downloaded from https://scihub.copernicus.eu/dhus/#/home to a format GMTSAR can use  
 **sbas_list.py:** makes a list of interferogram pairs based on a user-defined temporal and spatial baseline  
 **snaphu_dec.csh:** modified shell script from GMTSAR code. This unwraps interferograms after multi-looking them to speed up the process.  
